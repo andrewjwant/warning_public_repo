@@ -1,8 +1,7 @@
 from datetime import datetime
 
 def log_file(error_text):
-    date_stamp = datetime.today()
-    file_name = date_stamp.strftime("%Y%m%d") + "ErrorLog.txt"
+    file_name = datetime.today().strftime("%Y%m%d") + "ErrorLog.txt"
     with open(file_name, "a+") as error_log_file
     error_text = error_text + "\n"
     error_log_file.write(error_text) 
